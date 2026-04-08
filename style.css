@@ -34,15 +34,6 @@ button, .button {
 }
 
 .hero {
-  padding: 5rem 1.5rem 4rem;
-  text-align: center;
-  background: linear-gradient(180deg, rgba(17, 25, 40, 0.96), rgba(17, 25, 40, 0.92));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  position: relative;
-  transition: all 0.3s ease;
-}
-
-.hero.collapsed {
   position: fixed;
   top: 0;
   left: 0;
@@ -50,22 +41,19 @@ button, .button {
   padding: 1rem 1.5rem;
   z-index: 1000;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(180deg, rgba(17, 25, 40, 0.96), rgba(17, 25, 40, 0.92));
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  text-align: center;
+  transition: all 0.3s ease;
 }
 
-.hero.collapsed .hero-description {
+.hero .eyebrow {
   display: none;
 }
 
-.hero.collapsed .hero-actions {
-  display: none;
-}
-
-.hero.collapsed h1 {
+.hero h1 {
   font-size: 1.5rem;
-}
-
-.hero.collapsed .eyebrow {
-  font-size: 0.75rem;
+  margin: 0;
 }
 
 .hero-content {
@@ -73,13 +61,23 @@ button, .button {
   margin: 0 auto;
 }
 
-.eyebrow {
-  display: inline-block;
-  margin-bottom: 1rem;
-  color: var(--accent);
-  letter-spacing: 0.16em;
-  font-size: 0.85rem;
-  text-transform: uppercase;
+.intro {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.intro-description {
+  max-width: 740px;
+  margin: 0 auto 2rem;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.intro-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 h1 {
